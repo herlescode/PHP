@@ -1,24 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Root\Html\Modelo;
 
 class Diaria
 {
-    public $data;
+    // public string $data;
+    // public int $tempo;
+    // public Diarista $diarista;
+    // public Cliente $cliente;
 
-    public $tempo;
-
-    public Diarista $diarista;
-
-    public Cliente $cliente;
-
-    public function __construct($data, $tempo, Diarista $diarista, Cliente $cliente)
+    public function __construct(
+        public string $data, 
+        public int $tempo, 
+        public Diarista $diarista, 
+        public Cliente $cliente)
     {
-        $this->tempo = $tempo;
-        $this->data = $data;
-        $this->diarista = $diarista;
-        $this->cliente = $cliente;
+        // $this->tempo = $tempo;
+        // $this->data = $data;
+        // $this->diarista = $diarista;
+        // $this->cliente = $cliente;
     }
+    /**
+     * retorna a lista das diárias
+     */
 
     static public function obterTodas()
     {
